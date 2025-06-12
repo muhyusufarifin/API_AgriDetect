@@ -133,18 +133,22 @@ Berikut adalah beberapa endpoint API utama yang tersedia:
         Respon Sukses: Mengembalikan detail hasil analisis, termasuk ID gambar, ID pengguna, hasil diagnosis, dan detail lainnya.
 ```
 
-**Pengelolaan Gambar (/api/images)**
-```bash
+**Pengelolaan Gambar & Riwayat (/api/images)**
+
     GET /api/images
         Deskripsi: Mendapatkan semua gambar yang diunggah oleh pengguna yang terautentikasi.
         Headers: Authorization: Bearer <token_jwt>
         Respon Sukses: Array objek gambar.
-
+        
     GET /api/images/:id
         Deskripsi: Mendapatkan detail gambar tertentu berdasarkan ID.
         Headers: Authorization: Bearer <token_jwt>
         Respon Sukses: Objek gambar.
-```
+        
+    GET /api/images/analysis_history
+        Deskripsi: Mendapatkan riwayat lengkap hasil analisis penyakit untuk pengguna yang terautentikasi. Ini mencakup detail gambar dan hasil diagnosis.
+        Headers: Authorization: Bearer <token_jwt>
+        Respon Sukses: Array objek hasil analisis, masing-masing berisi informasi tentang gambar dan diagnosisnya.
 
 **Pengelolaan Penyakit (/api/diseases)**
 ```bash
