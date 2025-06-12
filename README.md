@@ -34,35 +34,31 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menyiapkan proyek di lin
 1.  **Klon Repositori:**
     ```bash
     git clone [https://github.com/muhyusufarifin/API_AgriDetect.git](https://github.com/muhyusufarifin/API_AgriDetect.git)
-    cd APIPlantDieses
+    cd API_AgriDetect
     ```
 
-2.  **Instal Dependensi:**
+2.  **Buat Folder yang Diperlukan:**
+    API ini memerlukan beberapa folder untuk penyimpanan data dan model. Pastikan Anda membuat folder-folder berikut di direktori root proyek (`APIPlantDieses`):
+
+    ```bash
+    mkdir uploads
+    ```
+    * `uploads/`: Digunakan oleh Multer untuk menyimpan gambar yang diunggah.
+
+3.  **Instal Dependensi:**
     ```bash
     npm install
     # atau jika Anda menggunakan yarn
     # yarn install
     ```
 
-3.  **Buat File `.env`:**
+4.  **Buat File `.env`:**
     Buat file bernama `.env` di direktori root proyek (`APIPlantDieses`). File ini akan berisi variabel lingkungan yang sensitif.
 
     ```bash
     touch .env
     ```
-
-4.  **Isi File `.env`:**
-    Tambahkan baris-baris berikut ke dalam file `.env` yang baru Anda buat. Pastikan untuk mengganti nilai placeholder dengan informasi Anda yang sebenarnya.
-
-    ```env
-    MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>?retryWrites=true&w=majority
-    JWT_SECRET=your_super_secret_jwt_key_here
-    PORT=5000
-    ```
-    * `MONGO_URI`: String koneksi ke database MongoDB Anda. Jika menggunakan MongoDB Atlas, dapatkan dari bagian "Connect" di cluster Anda.
-    * `JWT_SECRET`: Kunci rahasia unik untuk menandatangani token JWT Anda. Anda bisa membuat kunci acak yang panjang dan kompleks. Untuk membuat kunci acak, Anda dapat menjalankan `node generate_secret.js` di terminal Anda.
-    * `PORT`: Port di mana server API akan berjalan. (Default: 5000)
-
+    
 5.  **Membuat Kunci Rahasia JWT (Opsional, tapi Direkomendasikan):**
     Proyek ini dilengkapi dengan skrip kecil untuk menghasilkan kunci rahasia JWT yang kuat. Jalankan perintah berikut:
 
@@ -79,7 +75,6 @@ Setelah instalasi dan konfigurasi selesai, Anda dapat menjalankan server API:
 npm start
 # atau
 # node server.js
-
 ```
 
 Server API akan mulai berjalan dan dapat diakses di http://localhost:5000 (atau port yang Anda tentukan di .env).
@@ -92,6 +87,7 @@ APIPlantDieses/
 ├── node_modules/           # Dependencies proyek
 ├── model/                  # Model ML yang digunakan untuk deteksi penyakit
 │   └── model.json
+├── uploads                 # Digunakan oleh Multer untuk menyimpan gambar yang diunggah. 
 ├── middleware/             # Middleware Express (misalnya otentikasi)
 │   └── auth.js
 ├── models/                 # Definisi skema MongoDB (menggunakan Mongoose)
