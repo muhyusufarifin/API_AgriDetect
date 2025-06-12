@@ -157,15 +157,3 @@ Berikut adalah beberapa endpoint API utama yang tersedia:
         Respon Sukses: Objek penyakit.
 ```
 (Catatan: Endpoint untuk menambahkan/mengupdate/menghapus penyakit mungkin ada atau bisa ditambahkan jika diperlukan oleh peran admin.)
-
-## 🤝 Kontribusi
-
-Kontribusi dipersilakan! Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
-```bash
-    Fork repositori ini.
-    Buat branch baru untuk fitur Anda (git checkout -b feature/nama-fitur).
-    Lakukan perubahan Anda.
-    Komit perubahan Anda (git commit -m 'feat: tambahkan fitur baru').
-    Push ke branch Anda (git push origin feature/nama-fitur).
-    Buka Pull Request.
-```
