@@ -113,7 +113,7 @@ Berikut adalah beberapa endpoint API utama yang tersedia:
 
 **Autentikasi Pengguna (/api/auth)**
 ```bash
-    POST /api/auth/register
+    'POST /api/auth/register'
         Deskripsi: Mendaftarkan pengguna baru.
         Body: {"username": "string", "email": "string", "password": "string"}
         Respon Sukses: { "token": "string", "user": { "_id": "string", "username": "string", "email": "string" } }
@@ -134,7 +134,7 @@ Berikut adalah beberapa endpoint API utama yang tersedia:
 ```
 
 **Pengelolaan Gambar & Riwayat (/api/images)**
-
+```bash
     GET /api/images
         Deskripsi: Mendapatkan semua gambar yang diunggah oleh pengguna yang terautentikasi.
         Headers: Authorization: Bearer <token_jwt>
@@ -149,6 +149,7 @@ Berikut adalah beberapa endpoint API utama yang tersedia:
         Deskripsi: Mendapatkan riwayat lengkap hasil analisis penyakit untuk pengguna yang terautentikasi. Ini mencakup detail gambar dan hasil diagnosis.
         Headers: Authorization: Bearer <token_jwt>
         Respon Sukses: Array objek hasil analisis, masing-masing berisi informasi tentang gambar dan diagnosisnya.
+```
 
 **Pengelolaan Penyakit (/api/diseases)**
 ```bash
