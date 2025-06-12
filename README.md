@@ -33,10 +33,9 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menyiapkan proyek di lin
 
 1.  **Klon Repositori:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/APIPlantDieses.git](https://github.com/YOUR_USERNAME/APIPlantDieses.git)
+    git clone [https://github.com/muhyusufarifin/API_AgriDetect.git](https://github.com/muhyusufarifin/API_AgriDetect.git)
     cd APIPlantDieses
     ```
-    *(Ganti `YOUR_USERNAME` dengan nama pengguna GitHub Anda)*
 
 2.  **Instal Dependensi:**
     ```bash
